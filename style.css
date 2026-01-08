@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  background: #06060c;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+
+.shapes span {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, #7c7cff, transparent);
+  opacity: 0.25;
+  animation: spin 40s linear infinite;
+}
+
+.shapes span:nth-child(1) {
+  width: 400px;
+  height: 400px;
+  top: -120px;
+  left: 200px;
+}
+
+.shapes span:nth-child(2) {
+  width: 300px;
+  height: 300px;
+  bottom: -100px;
+  right: 180px;
+}
+
+.shapes span:nth-child(3) {
+  width: 250px;
+  height: 250px;
+  top: 300px;
+  right: -100px;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.sidebar {
+  width: 220px;
+  background: rgba(20,20,30,0.9);
+  padding: 25px;
+  height: 100vh;
+}
+
+.sidebar a {
+  display: block;
+  color: #cbd5f5;
+  text-decoration: none;
+  margin: 15px 0;
+}
+
+main {
+  flex: 1;
+  padding: 50px;
+}
+
+.btn {
+  padding: 14px 30px;
+  border-radius: 12px;
+  background: #8b5cf6;
+  color: black;
+  text-decoration: none;
+  margin: 5px;
+  display: inline-block;
+}
