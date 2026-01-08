@@ -54,6 +54,16 @@ body {
   margin: 15px 0;
 }
 
+<div class="invite-container">
+    <a
+      href="https://discord.com/oauth2/authorize?client_id=1457731027224236083"
+      class="invite-button"
+      target="_blank"
+    >
+      Invite Bot
+    </a>
+  </div>
+
 main {
   flex: 1;
   padding: 50px;
