@@ -1,76 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <title>BOLTBOT</title>
+
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #05060a;
+      color: white;
+      overflow: hidden;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 220px;
+      height: 100vh;
+      background: rgba(10, 12, 20, 0.85);
+      padding: 30px 20px;
+      backdrop-filter: blur(10px);
+      z-index: 5;
+    }
+
+    .sidebar h1 {
+      font-size: 22px;
+      margin-bottom: 30px;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #cbd5ff;
+      text-decoration: none;
+      margin: 15px 0;
+      font-size: 16px;
+    }
+
+    .sidebar a:hover {
+      color: #5b7cff;
+    }
+
+    /* Main content */
+    .content {
+      margin-left: 260px;
+      padding: 80px 60px;
+      position: relative;
+      z-index: 2;
+    }
+
+    h2 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      font-size: 18px;
+      color: #aab2ff;
+      margin-bottom: 15px;
+    }
+
+    .servers {
+      font-size: 16px;
+      margin-bottom: 30px;
+      color: #9aa3ff;
+    }
+
+    .features {
+      margin-top: 20px;
+    }
+
+    .features li {
+      margin: 10px 0;
+      list-style: none;
+    }
+
+    /* Invite Button */
     .invite-container {
       position: absolute;
-      top: 50%;
+      top: 55%;
       left: 50%;
       transform: translate(-50%, -50%);
-      z-index: 10;
+      text-align: center;
+      z-index: 4;
     }
 
     .invite-button {
-      padding: 16px 40px;
-      font-size: 20px;
-      font-weight: 600;
+      display: inline-block;
+      padding: 20px 52px;
+      font-size: 22px;
+      font-weight: 700;
+      border-radius: 16px;
       color: white;
       text-decoration: none;
-      border-radius: 14px;
       background: linear-gradient(135deg, #5865F2, #3b82f6);
-      box-shadow: 0 0 30px rgba(88, 101, 242, 0.6);
+      box-shadow: 0 0 40px rgba(88, 101, 242, 0.6);
+      animation: pulse 2.5s infinite;
+      transition: transform 0.25s ease;
+    }
+
+    .invite-button:hover {
+      transform: scale(1.1);
+    }
+
+    .invite-subtext {
+      margin-top: 12px;
+      color: #aab2ff;
+      font-size: 14px;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 30px rgba(88,101,242,0.5); }
+      50% { box-shadow: 0 0 55px rgba(88,101,242,0.9); }
+      100% { box-shadow: 0 0 30px rgba(88,101,242,0.5); }
+    }
+
+    /* Background circles */
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(90,100,255,0.35), transparent 70%);
+      animation: spin 40s linear infinite;
+      z-index: 1;
+    }
+
+    .c1 {
+      width: 500px;
+      height: 500px;
+      top: -150px;
+      left: 100px;
+    }
+
+    .c2 {
+      width: 420px;
+      height: 420px;
+      bottom: -150px;
+      right: 200px;
+      animation-duration: 60s;
+    }
+
+    .c3 {
+      width: 300px;
+      height: 300px;
+      bottom: 100px;
+      right: 50px;
+      animation-duration: 50s;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
     }
   </style>
-  <meta charset="UTF-8">
-  <title>ʙᴏʟᴛʙᴏᴛ</title>
-  <link rel="stylesheet" href="style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
 
-<div class="shapes">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-
-<aside class="sidebar">
-  <h2>ʙᴏʟᴛʙᴏᴛ</h2>
-  <nav>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h1>BOLTBOT</h1>
     <a href="#">Home</a>
-    <a href="#features">Features</a>
-    <a href="#dashboard">Dashboard</a>
-    <a href="#support">Support</a>
-  </nav>
-</aside>
-
-<main>
-  <section class="hero">
-    <h1>ʙᴏʟᴛʙᴏᴛ</h1>
-    <p class="subtitle">The #1 Discord Utility Bot</p>
-    <p class="servers">👥 10 servers using ʙᴏʟᴛʙᴏᴛ</p>
-
-    <div class="invite-container">
-    <a
-      href="https://discord.com/oauth2/authorize?client_id=1457731027224236083"
-      class="invite-button"
-      target="_blank"
-    >
-      Invite Bot
-    </a>
+    <a href="#">Features</a>
+    <a href="#">Dashboard</a>
+    <a href="#">Support</a>
   </div>
-  </section>
 
-  <section id="features">
-    <h2>Features</h2>
+  <!-- Main content -->
+  <div class="content">
+    <h2>BOLTBOT</h2>
+    <p class="tagline">The #1 Discord Utility Bot</p>
+    <p class="servers">👥 10 servers using BOLTBOT</p>
 
-    <div class="cards">
-      <div class="card">🛡 Moderation</div>
-      <div class="card">⚙ Utility</div>
-      <div class="card">🎮 Fun</div>
-    </div>
-  </section>
-</main>
+    <h3>Features</h3>
+    <ul class="features">
+      <li>🛡️ Moderation</li>
+      <li>⚙️ Utility</li>
+      <li>🎮 Fun</li>
+    </ul>
+  </div>
+
+  <!-- Invite Button -->
+  <div class="invite-container">
+    <a href="https://discord.com/oauth2/authorize?client_id=1457731027224236083"
+       class="invite-button"
+       target="_blank">
+      Invite BOLTBOT
+    </a>
+    <p class="invite-subtext">Get started in seconds ⚡</p>
+  </div>
+
+  <!-- Background Shapes -->
+  <div class="circle c1"></div>
+  <div class="circle c2"></div>
+  <div class="circle c3"></div>
 
 </body>
 </html>
