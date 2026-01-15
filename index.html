@@ -158,7 +158,36 @@
       to { transform: rotate(360deg); }
     }
 
-    
+    /* ===== MOBILE ONLY ===== */
+@media (max-width: 768px) {
+
+  .sidebar {
+    display: none;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero {
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .invite-btn {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
   </style>
 </head>
 
