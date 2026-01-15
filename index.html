@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
   <title>BOLTBOT</title>
 
   <style>
@@ -52,10 +50,11 @@
 
     /* Main content */
     .content {
-  margin-left: 240px;
-  padding: 60px;
-}
-
+      margin-left: 260px;
+      padding: 80px 60px;
+      position: relative;
+      z-index: 2;
+    }
 
     h2 {
       font-size: 38px;
@@ -84,14 +83,14 @@
     }
 
     /* Invite Button */
- .invite-container {
-  position: absolute;
-  top: 55%;
-  left: calc(50% + 110px); /* half of sidebar width */
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
+    .invite-container {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 4;
+    }
 
     .invite-button {
       display: inline-block;
@@ -159,60 +158,10 @@
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
     }
+  </style>
+</head>
 
-    /* ===== MOBILE ONLY ===== */
-/* ===== MOBILE FIX (does NOT affect PC) ===== */
-@media (max-width: 768px) {
-
-  body {
-    overflow-x: hidden;
-  }
-
-  /* Sidebar becomes top bar */
-  .sidebar {
-    position: relative;
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 16px 0;
-  }
-
-  .sidebar h1 {
-    font-size: 18px;
-  }
-
-  .sidebar a {
-    font-size: 14px;
-  }
-
-  /* Main content fills screen */
-  .content {
-    margin-left: 0;
-    padding: 32px 16px;
-    text-align: center;
-  }
-
-  /* Hero text readable */
-  .hero h1 {
-    font-size: 36px;
-  }
-
-  .subtitle {
-    font-size: 18px;
-  }
-
-  .servers {
-    font-size: 14px;
-  }
-
-  /* Button fits mobile */
-  .invite-btn {
-    width: 90%;
-    max-width: 320px;
-    font-size: 18px;
-  }
-}
+<body>
 
   <!-- Sidebar -->
   <div class="sidebar">
@@ -225,19 +174,17 @@
 
   <!-- Main content -->
   <div class="content">
-<div class="hero">
-  <h1>BOLTBOT</h1>
-  <p class="subtitle">The #1 Discord Utility Bot</p>
-  <p class="servers">👥 10 servers using BOLTBOT</p>
+    <h2>BOLTBOT</h2>
+    <p class="tagline">The #1 Discord Utility Bot</p>
+    <p class="servers">👥 10 servers using BOLTBOT</p>
 
-  <h3>Features</h3>
-  <ul>
-    <li>🛡️ Moderation</li>
-    <li>⚙️ Utility</li>
-    <li>🎮 Fun</li>
-  </ul>
-</div>
-
+    <h3>Features</h3>
+    <ul class="features">
+      <li>🛡️ Moderation</li>
+      <li>⚙️ Utility</li>
+      <li>🎮 Fun</li>
+    </ul>
+  </div>
 
   <!-- Invite Button -->
   <div class="invite-container">
@@ -256,3 +203,4 @@
 
 </body>
 </html>
+
