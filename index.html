@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>BOLTBOT</title>
 
   <style>
@@ -159,39 +161,58 @@
     }
 
     /* ===== MOBILE ONLY ===== */
+/* ===== MOBILE FIX (does NOT affect PC) ===== */
 @media (max-width: 768px) {
 
-  .sidebar {
-    display: none;
+  body {
+    overflow-x: hidden;
   }
 
+  /* Sidebar becomes top bar */
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 16px 0;
+  }
+
+  .sidebar h1 {
+    font-size: 18px;
+  }
+
+  .sidebar a {
+    font-size: 14px;
+  }
+
+  /* Main content fills screen */
   .content {
     margin-left: 0;
-    padding: 24px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .hero {
-    width: 100%;
-    max-width: 420px;
+    padding: 32px 16px;
     text-align: center;
   }
 
-  h1 {
-    font-size: 2.2rem;
+  /* Hero text readable */
+  .hero h1 {
+    font-size: 36px;
   }
 
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .servers {
+    font-size: 14px;
+  }
+
+  /* Button fits mobile */
   .invite-btn {
-    width: 100%;
+    width: 90%;
     max-width: 320px;
+    font-size: 18px;
   }
 }
-
-  </style>
-</head>
-
-<body>
 
   <!-- Sidebar -->
   <div class="sidebar">
