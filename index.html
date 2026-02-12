@@ -192,17 +192,30 @@
 
   <!-- Main content -->
   <div class="content">
-  <div class="hero">
-  <h1>BOLTBOT</h1>
-  <p class="subtitle">The #1 Discord Utility Bot</p>
-  <p class="servers">👥 10 servers using BOLTBOT</p>
+  
+  <section id="home-section" class="page-section">
+    <div class="hero">
+      <h1>BOLTBOT</h1>
+      <p class="subtitle">The #1 Discord Utility Bot</p>
+      <p class="servers">👥 10 servers using BOLTBOT</p>
+      </div>
+  </section>
 
-  <h3>Features</h3>
-  <ul>
-    <li>🛡️ Moderation</li>
-    <li>⚙️ Utility</li>
-    <li>🎮 Fun</li>
-  </ul>
+  <section id="docs-section" class="page-section" style="display: none;">
+    <h2 style="color: #f8d8b0;">📜 Documentation</h2>
+    <p>Everything you need to know about BOLTBOT.</p>
+    
+    <div class="docs-card">
+      <h3>Credits & Team</h3>
+      <p>BOLTBOT was built with ⚡ by the core team:</p>
+      <ul>
+        <li><strong>Lead Dev:</strong> [Your Name/Handle]</li>
+        <li><strong>Design:</strong> Inspired by the BOLTBOT community</li>
+        <li><strong>Special Thanks:</strong> All our early testers!</li>
+      </ul>
+    </div>
+  </section>
+
 </div>
 
   <!-- Invite Button -->
@@ -220,6 +233,32 @@
   <div class="circle c2"></div>
   <div class="circle c3"></div>
 
+<script>
+  function showPage(pageId) {
+    // 1. Hide all sections
+    const sections = document.querySelectorAll('.page-section');
+    sections.forEach(section => {
+      section.style.display = 'none';
+    });
+
+    // 2. Show the requested section
+    const target = document.getElementById(pageId);
+    if (target) {
+      target.style.display = 'block';
+    }
+
+    // 3. (Optional) Update active link styling
+    const links = document.querySelectorAll('.nav-link');
+    links.forEach(link => link.classList.remove('active'));
+    // We can add logic here to highlight the clicked link
+  }
+
+  // Hook up the sidebar links
+  // Replace your existing <a> tags in the sidebar with these:
+  // <a href="#" class="nav-link" onclick="showPage('home-section')">🏠 Home</a>
+  // <a href="#" class="nav-link" onclick="showPage('docs-section')">📜 Documentation</a>
+</script>
+  
 </body>
 </html>
 
