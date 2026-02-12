@@ -82,34 +82,33 @@ body {
   margin-bottom: 25px;
 }
 
+/* Styling those section headers */
 .nav-label {
   font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: #5d6683;
-  margin-bottom: 12px;
-  padding-left: 12px;
-  font-weight: 700;
+  letter-spacing: 2px;
+  color: #f8d8b0; /* Your saved peach color */
+  margin: 25px 0 10px 10px;
+  font-weight: 800;
+  opacity: 0.8;
 }
 
-/* Individual Links */
+/* Making the links feel interactive */
 .nav-link {
   display: flex;
   align-items: center;
-  color: #aeb6d0;
+  gap: 12px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  color: #cbd5f5;
   text-decoration: none;
-  padding: 12px 15px;
-  margin: 4px 0;
-  border-radius: 12px;
-  font-size: 15px;
-  font-weight: 500;
-  transition: all 0.2s ease;
 }
 
 .nav-link:hover {
-  background: rgba(88, 101, 242, 0.1);
-  color: #5865F2;
-  transform: translateX(5px);
+  background: rgba(248, 216, 176, 0.1); /* Subtle peach tint on hover */
+  color: white;
+  transform: translateX(8px); /* Slides right slightly when hovered */
 }
 
 /* Active State */
