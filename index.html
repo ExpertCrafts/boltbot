@@ -208,7 +208,7 @@
 
   <div class="nav-group">
     <p class="nav-label">Community</p>
-    <a href="#" class="nav-link">🛠️ Support</a>
+    <a href="#" class="nav-link" onclick="showPage('support-section')">🛠️ Support</a>
     <a href="#" class="nav-link" onclick="showPage('docs-section')">📜 Documentation</a>
   </div>
 </div>
@@ -234,6 +234,28 @@
       </ul>
     </div>
   </section>
+
+    <section id="support-section" class="page-section" style="display: none;">
+      <div class="docs-card">
+        <h3>🛠️ Support</h3>
+        <p>Need help with BOLTBOT? Reach out to the team directly on Discord:</p>
+        <ul style="margin-top: 15px; text-align: left; list-style: none;">
+          <li style="color: #f8d8b0; font-size: 18px; margin-bottom: 10px;">👤 <strong>expertcrafts</strong></li>
+          <li style="color: #f8d8b0; font-size: 18px;">👤 <strong>notexpertcrafts</strong></li>
+        </ul>
+        <p style="margin-top: 20px; font-size: 14px; opacity: 0.7;">Feel free to send a friend request or a DM!</p>
+      </div>
+    </section>
+
+</div> ```
+
+---
+
+### 🔗 Don't forget the Sidebar Link!
+Since you've added the "page," you need to make sure the button in your sidebar actually "calls" it. Scroll up to your sidebar links (usually near the top) and update the Support link to this:
+
+```html
+<a href="#" class="nav-link" onclick="showPage('support-section')">🛠️ Support</a>
 </div>
 
   <!-- Invite Button -->
