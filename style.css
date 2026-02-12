@@ -40,18 +40,88 @@ body {
   to { transform: rotate(360deg); }
 }
 
+/* Sidebar Container */
 .sidebar {
-  width: 220px;
-  background: rgba(20,20,30,0.9);
-  padding: 25px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 260px; /* Slightly wider for better breathing room */
   height: 100vh;
+  background: rgba(13, 15, 23, 0.8);
+  backdrop-filter: blur(12px);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
 }
 
-.sidebar a {
-  display: block;
-  color: #cbd5f5;
+/* Header Section */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  padding-left: 10px;
+}
+
+.sidebar-header h1 {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.bolt-icon {
+  font-size: 24px;
+  filter: drop-shadow(0 0 10px #5865F2);
+}
+
+/* Navigation Groups */
+.nav-group {
+  margin-bottom: 25px;
+}
+
+.nav-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #5d6683;
+  margin-bottom: 12px;
+  padding-left: 12px;
+  font-weight: 700;
+}
+
+/* Individual Links */
+.nav-link {
+  display: flex;
+  align-items: center;
+  color: #aeb6d0;
   text-decoration: none;
-  margin: 15px 0;
+  padding: 12px 15px;
+  margin: 4px 0;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  background: rgba(88, 101, 242, 0.1);
+  color: #5865F2;
+  transform: translateX(5px);
+}
+
+/* Active State */
+.nav-link.active {
+  background: rgba(88, 101, 242, 0.15);
+  color: #fff;
+  border-left: 3px solid #5865F2;
+}
+
+/* Adjust Main Content to match new width */
+.content {
+  margin-left: 260px;
 }
 
 main {
